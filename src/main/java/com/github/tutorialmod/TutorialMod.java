@@ -1,5 +1,7 @@
 package com.github.tutorialmod;
 
+import com.github.tutorialmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
@@ -25,16 +27,26 @@ public class TutorialMod {
     public TutorialMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {}
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {}
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.RAW_BISMUTH);
+        }
+    }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {}
+    public void onServerStarting(ServerStartingEvent event) {
+        LOGGER.info("Loaded TutorialMod");
+    }
 
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
