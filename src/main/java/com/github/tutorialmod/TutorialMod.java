@@ -1,6 +1,7 @@
 package com.github.tutorialmod;
 
 import com.github.tutorialmod.block.ModBlocks;
+import com.github.tutorialmod.item.ModCreativeModeTabs;
 import com.github.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -29,6 +30,7 @@ public class TutorialMod {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 

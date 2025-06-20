@@ -3,5 +3,7 @@
   "item.tutorialmod.raw_bismuth": "Рудный бисмут",
 
   "block.tutorialmod.bismuth_block": "Бисмутовый блок",
-  "block.tutorialmod.bismuth_ore": "Бисмутовая руда"
+  "block.tutorialmod.bismuth_ore": "Бисмутовая руда",
+
+  "creativetab.tutorialmod.bismuth_items": "Бисмутовые предметы"
 }
