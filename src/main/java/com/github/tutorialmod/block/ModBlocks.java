@@ -23,7 +23,6 @@ public class ModBlocks {
         "bismuth_block", () -> new Block(
             BlockBehaviour.Properties.of()
                 .strength(4f)
-                .requiresCorrectToolForDrops()
                 .sound(SoundType.AMETHYST)
         )
     );
@@ -35,6 +34,16 @@ public class ModBlocks {
                 .strength(3f)
                 .requiresCorrectToolForDrops()
                 .sound(SoundType.STONE)
+        )
+    );
+
+    public static final DeferredBlock<Block> DEEPSLATE_BISMUTH_ORE = registerBlock(
+        "deepslate_bismuth_ore", () -> new DropExperienceBlock(
+            UniformInt.of(3, 4),
+            BlockBehaviour.Properties.of()
+                .strength(4f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.DEEPSLATE)
         )
     );
 

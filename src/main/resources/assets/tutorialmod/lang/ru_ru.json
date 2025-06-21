@@ -1,9 +1,10 @@
 {
-  "item.tutorialmod.bismuth": "Бисмут",
-  "item.tutorialmod.raw_bismuth": "Рудный бисмут",
-
   "block.tutorialmod.bismuth_block": "Бисмутовый блок",
   "block.tutorialmod.bismuth_ore": "Бисмутовая руда",
+  "block.tutorialmod.deepslate_bismuth_ore": "Бисмутоносный глубинный сланец",
 
-  "creativetab.tutorialmod.bismuth_items": "Бисмутовые предметы"
+  "creativetab.tutorialmod.bismuth_items": "Бисмутовые предметы",
+
+  "item.tutorialmod.bismuth": "Бисмут",
+  "item.tutorialmod.raw_bismuth": "Рудный бисмут"
 }

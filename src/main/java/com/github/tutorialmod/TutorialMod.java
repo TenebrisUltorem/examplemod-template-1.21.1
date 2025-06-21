@@ -50,6 +50,7 @@ public class TutorialMod {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BISMUTH_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BISMUTH_ORE);
         }
     }
 
