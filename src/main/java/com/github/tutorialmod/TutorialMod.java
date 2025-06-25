@@ -52,6 +52,9 @@ public class TutorialMod {
             event.accept(ModBlocks.BISMUTH_ORE);
             event.accept(ModBlocks.DEEPSLATE_BISMUTH_ORE);
         }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.MAGIC_BLOCK);
+        }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.CHISEL);
         }
