@@ -58,6 +58,9 @@ public class TutorialMod {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.CHISEL);
         }
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.RADISH);
+        }
     }
 
     @SubscribeEvent
